@@ -13,13 +13,12 @@ setup(name='pyress',
       author_email='brotchie@gmail.com',
       url='http://code.google.com/p/pyress/',
       long_description= \
-          'IRESS is a market data system developed by IRESS Market Technology Ltd. '
-          'Their desktop IRESS solution provides real-time and historical data for '
+          'IRESS is a market data system developed by IRESS Market Technology Ltd.\n'
+          'Their desktop IRESS solution provides real-time and historical data for\n'
           'wide range of equities and derivatives.\n\n'
-          'The IRESS application exposes a COM Automation Object Model that allows '
-          'direct access to the data streams that drive the figures displayed in the '
-          'user interface. pyress wraps sections of the IRESS COM Automation Object '
-          'Model in a Pythonic interface.',
+          'The IRESS application exposes a COM Automation Object Model that allows\n'
+          'direct access to the data streams that drive the user interface. pyress\n'
+          'wraps sections of the IRESS COM Automation Object Model in a pythonic interface.',
       platforms=['win32'],
       license='Apache 2.0',
       classifiers=[
@@ -29,5 +28,6 @@ setup(name='pyress',
         'Programming Language :: Python',
         'Operating System :: Microsoft :: Windows',
         'Topic :: Office/Business :: Financial',
+        'Environment :: Win32 (MS Windows)',
       ],
 )
