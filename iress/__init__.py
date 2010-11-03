@@ -5,4 +5,5 @@ from client import (
     DfsPrice,
     DfsSec,
     DfsIndicate,
+    DfsTimeSeries,
 )
