@@ -26,15 +26,16 @@ import time
 import logging
 
 from win32com import client
+from typelibhelper import EnsureLatestVersion
 
 log = logging.getLogger(__name__)
 
 # Generate and import Python modules for the Iress typelibs.
-DfsCmd = client.gencache.EnsureModule('{96EB07E1-03D0-11CF-B214-00AA002F2ED9}', 0, 12, 5007)
-DfsPrice = client.gencache.EnsureModule('{DF120F00-A275-11D1-A122-0000F82508F6}', 0, 12, 5005)
-DfsSec = client.gencache.EnsureModule('{AF802C80-B975-11D1-A138-0000F82508F6}', 0, 12, 5004)
-DfsIndicate = client.gencache.EnsureModule('{9339DB61-1602-11D2-8FC4-0000F824C8AA}', 0, 12, 5003)
-DfsTimeSeries = client.gencache.EnsureModule('{4832E620-C2AA-11D1-A143-0000F82508F6}', 0, 12, 5002)
+DfsCmd = EnsureLatestVersion('{96EB07E1-03D0-11CF-B214-00AA002F2ED9}')
+DfsPrice = EnsureLatestVersion('{DF120F00-A275-11D1-A122-0000F82508F6}')
+DfsSec = EnsureLatestVersion('{AF802C80-B975-11D1-A138-0000F82508F6}')
+DfsIndicate = EnsureLatestVersion('{9339DB61-1602-11D2-8FC4-0000F824C8AA}')
+DfsTimeSeries = EnsureLatestVersion('{4832E620-C2AA-11D1-A143-0000F82508F6}')
 
 # Default timeout when fetching data from Iress.
 DEFAULT_DATA_TIMEOUT = 15

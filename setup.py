@@ -7,11 +7,11 @@ except:
 
 setup(name='pyress',
       packages=['iress'],
-      version='0.1.0',
+      version='0.2.0',
       description='Pythonic wrapper around the IRESS COM Interface.',
       author='James Brotchie',
       author_email='brotchie@gmail.com',
-      url='http://code.google.com/p/pyress/',
+      url='https://github.com/brotchie/pyress',
       long_description= \
           'IRESS is a market data system developed by IRESS Market Technology Ltd.\n'
           'Their desktop IRESS solution provides real-time and historical data for\n'
