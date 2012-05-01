@@ -6,6 +6,7 @@ from client import (
     DfsSec,
     DfsIndicate,
     DfsTimeSeries,
+    DfsText,
 )
 
 from ado import (

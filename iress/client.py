@@ -36,6 +36,7 @@ DfsPrice = EnsureLatestVersion('{DF120F00-A275-11D1-A122-0000F82508F6}')
 DfsSec = EnsureLatestVersion('{AF802C80-B975-11D1-A138-0000F82508F6}')
 DfsIndicate = EnsureLatestVersion('{9339DB61-1602-11D2-8FC4-0000F824C8AA}')
 DfsTimeSeries = EnsureLatestVersion('{4832E620-C2AA-11D1-A143-0000F82508F6}')
+DfsText = EnsureLatestVersion('{4FF26370-DEF3-11D1-A15F-0000F82508F6}')
 
 # Default timeout when fetching data from Iress.
 DEFAULT_DATA_TIMEOUT = 15
