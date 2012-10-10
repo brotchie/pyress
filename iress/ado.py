@@ -50,23 +50,32 @@ class IressADOClient(object):
         self.c.Provider = 'IRESSOleDBProvider.IOleDBP.1'
         self.c.Open()
 
-    def get_procedures(self):
+    def get_procedures(self, catalog='IPS'):
         """
         Returns a list of the available stored procedures.
 
         """
-        rs = self.c.OpenSchema(16, ['IPS'])
+        rs = self.c.OpenSchema(16, [catalog])
         return [record['PROCEDURE_NAME'] for record in _extract_recordset(rs)]
+
+    def get_catalogs(self):
+        """
+        Returns the list of schema catalogs.
+
+        """
+        rs = self.c.OpenSchema(1)
+        return [record['CATALOG_NAME'] for record in _extract_recordset(rs)]
 
     def get_procedure_params(self, procedure):
         """
-        Gets the list of parameters for a given stored procedure.
+        Gets the list of parameters in the format (name, type), where type
+        is the DataTypeEnum of the procedure parameter.
 
         """
         cmd = self._create_command(procedure)
         cmd.Parameters.Refresh()
 
-        parameters = [cmd.Parameters(i).Name for i in range(cmd.Parameters.Count)]
+        parameters = [(cmd.Parameters(i).Name, cmd.Parameters(i).Type) for i in range(cmd.Parameters.Count)]
         parameters.sort()
         return parameters
 
